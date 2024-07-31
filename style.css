@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  span {
+    background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 5s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text color */
+     /* Font size */
+    font-weight: bold; /* Text weight */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Shadow for better readability */
+  }
+  .flex-cont {
+   height:100vh;
+  }
+  .s {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+   padding: 10px; /* Add some padding to make the text more readable */
+   font-size: 16px; /* Increase the font size */
+    border-radius: 5px; /* Add a rounded corner effect */
+  }
+  @media (max-width: 768px) {
+    .s {
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      filter: hue-rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -5000%);
+      opacity: 0;
+      filter: hue-rotate(720deg);
+    }
+  }
