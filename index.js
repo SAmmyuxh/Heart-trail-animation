@@ -16,3 +16,14 @@ $("body").on("mousemove", function(event) {
       spanEl.remove();
     }, 3000);
   });
+  let audioPlayed = false;
+
+    $('#overlay').on('click', function() {
+        var audio = new Audio('Arpitamaaf.mp3');
+        audio.play().then(() => {
+            audioPlayed = true;
+            $('#overlay').hide();
+        }).catch(error => {
+            console.error("Audio playback failed:", error);
+        });
+  });
